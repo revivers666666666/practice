@@ -11,8 +11,8 @@ public class Dog{
         d.size = 40 ;
         d.bark();
         King king = new King();
-    king.onername = "dennis";
-    king.own();
+        king.onername = "dennis";
+        king.own();
     }
     
 
