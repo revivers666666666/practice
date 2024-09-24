@@ -1,0 +1,58 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        // C/C++ 编译任务
+        {
+            "type": "cppbuild",
+            "label": "C/C++: gcc 生成活动文件",
+            "command": "/usr/bin/gcc",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "调试器生成的任务。"
+        },
+
+        // Java 编译任务
+        {
+            "label": "Java Compile",
+            "type": "shell",
+            "command": "javac",
+            "args": [
+                "${file}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [],
+            "detail": "编译Java文件的任务"
+        },
+
+        // Java 运行任务
+        {
+            "label": "Java Run",
+            "type": "shell",
+            "command": "java",
+            "args": [
+                "${fileBasenameNoExtension}"
+            ],
+            "group": "test",
+            "dependsOn": "Java Compile",
+            "problemMatcher": []
+        }
+    ]
+}

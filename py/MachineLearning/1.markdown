@@ -1,0 +1,8 @@
+supervise learning
+unsupervise learning
+not given any labels
+
+training set 
+input variable / feature 
+output variable 
+train example
